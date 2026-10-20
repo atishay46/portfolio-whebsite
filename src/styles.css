@@ -42,7 +42,7 @@
 :root {
   --branco: #eaeaea;
   --inox: #acacab;
-  --cinza: #757575;
+  --cinza: #383838;
   --chumbo: #2c2c2c;
   --preto: #121212;
   --radius: 0.625rem;
@@ -97,8 +97,15 @@
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -106,26 +113,77 @@
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
-  html.theme-transition, html.theme-transition * {
+
+  html.theme-transition,
+  html.theme-transition * {
     transition: background-color 250ms ease, border-color 250ms ease, color 250ms ease !important;
   }
-  :focus-visible { outline: 1px solid var(--color-ring); outline-offset: 3px; border-radius: 4px; }
-  ::selection { background: var(--chumbo); color: var(--branco); }
+
+  :focus-visible {
+    outline: 1px solid var(--color-ring);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--chumbo);
+    color: var(--branco);
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
-@utility font-display { font-family: var(--font-display); font-weight: 400; }
-@utility font-label { font-family: var(--font-label); font-weight: 500; }
-@utility font-body { font-family: var(--font-body); }
-@utility label-caps { font-family: var(--font-label); font-weight: 500; text-transform: uppercase; letter-spacing: 0.22em; font-size: 0.75rem; }
-@utility container-page { width: 100%; max-width: 1240px; margin-inline: auto; padding-inline: 1.25rem; @media (min-width: 768px) { padding-inline: 2.5rem; } }
+@utility font-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+@utility font-label {
+  font-family: var(--font-label);
+  font-weight: 1000;
+}
+
+@utility font-body {
+  font-family: var(--font-body);
+}
+
+@utility label-caps {
+  font-family: var(--font-label);
+  font-weight: 1000;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.85rem;
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 2.5rem;
+  }
+}
 
 @utility reveal {
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 700ms ease, transform 700ms ease;
-  &.is-visible { opacity: 1; transform: none; }
+
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+  }
 }

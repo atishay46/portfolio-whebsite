@@ -16,7 +16,7 @@ export function SocialLinks({ className = "" }: { className?: string }) {
           <li key={s.name}>
             <a
               href={s.href}
-              target={s.icon === "mail" ? undefined : "_blank"}
+              target="_blank"
               rel="noreferrer"
               aria-label={s.name}
               className="inline-block text-muted-foreground transition-all duration-200 hover:-translate-y-0.5 hover:text-foreground"
@@ -34,11 +34,11 @@ export function Hero() {
   return (
     <section id="top" className="container-page flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center py-20 text-center">
       <Reveal className="flex flex-col items-center">
-        <p className="label-caps text-muted-foreground">Hello, I'm</p>
+        <p className="label-caps text-foreground">Hello, I'm</p>
         <h1 className="font-display mt-6 text-[clamp(3.2rem,11vw,9.5rem)] uppercase leading-[0.92] tracking-tight">
           {personalInfo.name}
         </h1>
-        <p className="mt-8 text-sm font-medium tracking-wide text-muted-foreground md:text-base">{personalInfo.role}</p>
+        <p className="mt-8 text-lg font-medium tracking-wide text-muted-foreground md:text-base">{personalInfo.role}</p>
         <p className="mt-3 max-w-md text-lg text-foreground/85">{personalInfo.tagline}</p>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
           <a href={personalInfo.resume} target="_blank" rel="noreferrer" className={btnPrimary}>

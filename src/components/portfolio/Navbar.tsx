@@ -43,13 +43,16 @@ export function Navbar() {
   }, []);
 
   const link = (id: string) =>
-    `font-label text-sm tracking-wide transition-colors hover:text-foreground ${active === id ? "text-foreground" : "text-muted-foreground"}`;
+    `font-label text-md tracking-wide transition-colors hover:text-foreground ${active === id ? "text-foreground" : "text-muted-foreground"}`;
 
   return (
     <header className="sticky top-0 z-50 border-b border-nav-border bg-background/90 backdrop-blur">
       <nav className="container-page flex h-16 items-center justify-between" aria-label="Primary">
-        <a href="#top" className="font-label text-base tracking-[0.2em]">
-          {personalInfo.initials}
+        <a href="#top" className="flex items-center gap-2.5 group" aria-label="Atishay Jain - home">
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground font-display text-base font-semibold tracking-tight transition-transform group-hover:scale-105">
+            AJ
+          </span>
+
         </a>
         <div className="hidden items-center gap-8 md:flex">
           {navItems.map((n) => (
@@ -74,12 +77,12 @@ export function Navbar() {
       </nav>
       <div
         id="mobile-menu"
-        className={`grid overflow-hidden border-nav-border transition-all duration-300 md:hidden ${open ? "grid-rows-[1fr] border-t" : "grid-rows-[0fr]"}`}
+        className={`grid overflow - hidden border - nav - border transition - all duration - 300 md:hidden ${open ? "grid-rows-[1fr] border-t" : "grid-rows-[0fr]"} `}
       >
         <div className="min-h-0">
           <div className="container-page flex flex-col gap-1 py-4">
             {navItems.map((n) => (
-              <a key={n.id} href={`#${n.id}`} onClick={() => setOpen(false)} tabIndex={open ? 0 : -1} className={`${link(n.id)} py-2`}>
+              <a key={n.id} href={`#${n.id} `} onClick={() => setOpen(false)} tabIndex={open ? 0 : -1} className={`${link(n.id)} py - 2`}>
                 {n.label}
               </a>
             ))}

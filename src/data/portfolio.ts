@@ -1,17 +1,18 @@
-// Edit all portfolio content here — layout components read from this file.
+// Edit all portfolio content here - layout components read from this file.
 export const personalInfo = {
   name: "Atishay Jain",
   initials: "AJ",
   role: "Computer Science & Engineering Student · Software Developer",
   tagline: "Building thoughtful web experiences with code and curiosity.",
   email: "atishayjain6245@gmail.com",
+  emailHref: "https://mail.google.com/mail/?view=cm&fs=1&to=atishayjain6245@gmail.com",
   phone: "+91 9021585776",
   location: "Nagpur, India",
   github: "https://github.com/atishay46",
   linkedin: "https://linkedin.com/in/atishayjain06",
   portfolio: "https://atipersonalweb.vercel.app/",
   leetcode: "https://leetcode.com/u/AtishayJain6/",
-  resume: "/resume.pdf",
+  resume: "https://drive.google.com/file/d/15RZWEMrc88cisc2EdjEOCXVSoq8hNZZJ/view?usp=sharing",
   education: {
     degree: "B.Tech in Computer Science and Engineering",
     school: "Shri Ramdeobaba College of Engineering and Management",
@@ -30,7 +31,7 @@ export const navItems = [
 export const socialLinks = [
   { name: "GitHub", href: personalInfo.github, icon: "github" },
   { name: "LinkedIn", href: personalInfo.linkedin, icon: "linkedin" },
-  { name: "Email", href: `mailto:${personalInfo.email}`, icon: "mail" },
+  { name: "Email", href: personalInfo.emailHref, icon: "mail" },
 ] as const;
 
 export const about = {
@@ -47,8 +48,8 @@ export const experience = [
   {
     company: "Acencore",
     role: "SDE Intern",
-    duration: "Aug — Oct 2025",
-    orgLink: "https://github.com/organization", // placeholder — replace with real org link
+    duration: "Aug - Oct 2025",
+    orgLink: "https://github.com/scoutabl/scoutabl_frontend",
     summary:
       "Developed responsive, production-ready interfaces from Figma designs using React.js and JavaScript, while integrating REST APIs, resolving frontend-backend issues, and collaborating with the Tech Lead to improve code quality.",
     points: [
@@ -66,7 +67,7 @@ export const projects = [
     name: "EcoSpectra",
     subtitle: "Plastic Pollution Detection System",
     description:
-      "Full-stack platform for plastic waste detection, reporting, and environmental monitoring — integrating computer vision, GIS-based tracking, pollution indices, analytics, and automated reporting.",
+      "Full-stack platform for plastic waste detection, reporting, and environmental monitoring - integrating computer vision, GIS-based tracking, pollution indices, analytics, and automated reporting.",
     tech: ["React.js", "FastAPI", "Python", "Computer Vision", "GIS"],
     live: "https://ecospectra.vercel.app/",
     github: "https://github.com/atishay46", // replace with repo URL
@@ -115,6 +116,6 @@ export const skillsSecondary = [
 
 export const highlights = [
   { label: "Certification", title: "AWS Cloud Essentials Certification", detail: "AWS Skill Builder" },
-  { label: "Hackathon", title: "Final Round — Web Reshape Hackathon", detail: "VNIT Nagpur, 2025" },
+  { label: "Hackathon", title: "Final Round - Web Reshape Hackathon", detail: "VNIT Nagpur, 2025" },
   { label: "Community", title: "Nagpur Toastmasters Club", detail: "Public speaking and interpersonal communication" },
 ];

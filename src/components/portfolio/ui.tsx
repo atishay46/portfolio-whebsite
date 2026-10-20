@@ -25,13 +25,10 @@ export function Reveal({ children, className = "" }: { children: ReactNode; clas
   );
 }
 
-export function SectionHeader({ index, label, title, subtitle }: { index: string; label: string; title: string; subtitle?: string }) {
+export function SectionHeader({ title, subtitle }: { index?: string; label?: string; title: string; subtitle?: string }) {
   return (
     <Reveal className="mb-14 md:mb-20">
-      <p className="label-caps text-muted-foreground">
-        {index} — {label}
-      </p>
-      <h2 className="font-display mt-5 text-5xl leading-[1.05] md:text-7xl">{title}</h2>
+      <h2 className="font-display text-5xl leading-[1.05] md:text-7xl">{title}</h2>
       {subtitle && <p className="font-label mt-4 text-lg text-muted-foreground">{subtitle}</p>}
     </Reveal>
   );

@@ -3,7 +3,7 @@ import { Navbar } from "@/components/portfolio/Navbar";
 import { About, Experience, Hero, Projects, Skills } from "@/components/portfolio/Sections";
 import { Contact, Footer } from "@/components/portfolio/Contact";
 
-const title = "Atishay Jain — Software Developer";
+const title = "Atishay Jain";
 const description = "Portfolio of Atishay Jain, Computer Science & Engineering student and software developer in Nagpur, India.";
 
 export const Route = createFileRoute("/")({

@@ -5,7 +5,7 @@ import { Reveal, SectionHeader } from "./ui";
 
 type Fields = { name: string; email: string; message: string };
 
-// Swap this for EmailJS later (read keys from import.meta.env.VITE_* — never hardcode).
+// Swap this for EmailJS later (read keys from import.meta.env.VITE_* - never hardcode).
 async function sendMessage(_data: Fields) {
   await new Promise((r) => setTimeout(r, 600));
 }
@@ -36,7 +36,7 @@ export function Contact() {
   };
 
   const details = [
-    { label: "Email", value: personalInfo.email, href: `mailto:${personalInfo.email}`, Icon: Mail },
+    { label: "Email", value: personalInfo.email, href: personalInfo.emailHref, Icon: Mail },
     { label: "LinkedIn", value: "linkedin.com/in/atishayjain06", href: personalInfo.linkedin, Icon: Linkedin },
     { label: "GitHub", value: "github.com/atishay46", href: personalInfo.github, Icon: Github },
     { label: "Location", value: personalInfo.location, Icon: MapPin },
@@ -99,7 +99,7 @@ export function Contact() {
               {status === "sending" ? "Sending…" : "Send Message"}
             </button>
             <p role="status" className="min-h-6 text-sm text-muted-foreground">
-              {status === "sent" && <span className="inline-flex items-center gap-2"><Check size={14} /> Thanks — your message has been received.</span>}
+              {status === "sent" && <span className="inline-flex items-center gap-2"><Check size={14} /> Thanks - your message has been received.</span>}
             </p>
           </form>
         </Reveal>
